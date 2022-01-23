@@ -24,7 +24,7 @@ public class PercentageDisplay implements Observer {
      * @param Hashmap with the candidates
      */
     public void update(HashMap<String, Integer> votes) {
-        numVotes = 0;
+        //numVotes = 0;
         for (HashMap.Entry<String, Integer> entry : votes.entrySet()) {
             numVotes = numVotes + entry.getValue();
         }
@@ -38,7 +38,7 @@ public class PercentageDisplay implements Observer {
      */
     private void display() {
         double perc;
-        double dbNumVotes = numVotes;
+        double dbNumVotes = numVotes;  //converts int to double to prevent number loss
         System.out.println("Current Percent of Votes:");
         for (HashMap.Entry<String, Integer> entry : votes.entrySet()) {
             perc = (entry.getValue() / dbNumVotes) * 100;

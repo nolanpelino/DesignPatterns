@@ -39,9 +39,11 @@ public class StudentGovPoll implements Subject {
      * Calls the update method on all current observers
      */
     public void notifyObservers() {
-        for (Observer individual : observers){
-          individual.update(this.votes);
-      }
+        if(numUpdates % 4 == 0) {
+            for (Observer individual : observers){
+            individual.update(this.votes);
+            }
+        }
     }
 
     /**
@@ -57,8 +59,9 @@ public class StudentGovPoll implements Subject {
      * @param String of the candidates name and their votes
      */
     public void enterVotes(String president, int num) {
+        numUpdates++;
         num = num + votes.get(president);
-        votes.put(president, num);
+        votes.replace(president, num);
         notifyObservers();
     }
     
