@@ -53,7 +53,7 @@ public abstract class Car {
      */
     protected void displayAccesories() {
         System.out.println(accessory.size());
-        System.out.println("Accessories: \n");
+        System.out.println("Accessories:");
         for (int i = 0; i < accessory.size(); i++) {
            System.out.println("- " + accessory.get(i)); 
         }
