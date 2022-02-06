@@ -13,5 +13,5 @@ public enum Accessories {
     FLOOR_MATTS,
     BLUE_TOOTH,
     EXTRA_CUP_HOLDERS,
-    PHONE_CHARGER;
+    PHONE_CHARGER
 }
