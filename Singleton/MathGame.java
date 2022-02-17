@@ -11,12 +11,19 @@ public class MathGame {
     private Scanner reader;
     private String [] operands =  {"+", "-", "*", "/"};
 
+    /**
+     * MathGame constructor
+     */
     private MathGame() {
         rand = new Random();
         reader = new Scanner(System.in);
         System.out.println("Let's have fun with Math!");
     }
 
+    /**
+     * Returns an instance of a Mathgame object
+     * @return MathGame
+     */
     public static MathGame getInstance(){
         if (mathGame == null) {
            MathGame mathGame2 = new MathGame();
@@ -25,6 +32,9 @@ public class MathGame {
         return mathGame;
     }
 
+    /**
+     * Method to interact with users decision
+     */
     public void play() {
         boolean stillPlaying = true;
         while (stillPlaying) {
@@ -41,6 +51,11 @@ public class MathGame {
         }
     }
 
+
+    /**
+     * Plays the math game
+     * @return boolean
+     */
     private boolean playRound() {
         int num1 = rand.nextInt(101) + 1;
         int num2 = rand.nextInt(101) + 1;
@@ -62,6 +77,13 @@ public class MathGame {
         return false;
     }
 
+    /**
+     * Does arithmetic operations with both random numbers
+     * @param int
+     * @param int
+     * @param int
+     * @return double
+     */
     private double manageNums(int num1, int num2, int randOp) {
         double n1 = num1;
         double n2 = num2;
@@ -76,7 +98,7 @@ public class MathGame {
     }
 
     /**
-     * @author jpdymond -- Stack Overflow
+     * @author Stack Overflow User: jpdymond
      * @param double
      * @param int
      * @return double
