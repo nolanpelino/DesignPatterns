@@ -22,6 +22,6 @@ public class SpanishState implements State{
     }
 
     public void pressSpanishButton() {
-        
+        System.out.println("You are already in Spanish Mode");
     }
 }

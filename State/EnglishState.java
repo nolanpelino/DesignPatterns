@@ -14,7 +14,7 @@ public class EnglishState implements State {
     }
 
     public void pressEnglishButton() {
-
+        System.out.println("You are already in English mode");
     }
 
     public void pressFrenchButton() {
