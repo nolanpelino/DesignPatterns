@@ -1,3 +1,6 @@
+/**
+ * @author npelino
+ */
 public interface State {
     public void pressStarButton();
     public void pressHappyButton();
