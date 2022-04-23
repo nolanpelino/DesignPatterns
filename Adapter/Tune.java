@@ -1,3 +1,6 @@
+    /**
+     * @author npelino
+     */
 public interface Tune {
 
     public String getArtistName();

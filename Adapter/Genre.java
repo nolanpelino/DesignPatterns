@@ -1,3 +1,6 @@
+/**
+ * @author npelino
+ */
 public enum Genre {
     ROCK,
     POP,
